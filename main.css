@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+body {
+/* position: relative; */
+background-color: white;
+/* min-height: 100vh; */
+font-family: 'Azeret Mono', monospace;
+font-weight: 400;
+line-height: 1.58;
+letter-spacing: -.003em;
+font-size: 20px;
+/* padding: 70px; */
+margin: 0;
+
+}
+
+.hero-area img {
+border-radius: 20px;
+width: 85%;
+margin: 25px;
+position: relative;
+right: 15px;
+z-index: -1;
+   max-width: 100%;
+   overflow: hidden;
+}
+
+/* .logo img {
+z-index: 1;
+margin: 25px;
+position: relative;
+left: 380px;
+bottom: 530px;
+display: flex;
+ */
+
+
+
+
+}
+h3 {
+color: #000;
+
+}
+/* overlay */
+.btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 2;
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+.btn span {
+  width: 40px;
+  height: 6px;
+  background: black;
+  display: flex;
+  position: absolute;
+  margin: 0;
+  transition: .3s;
+ }
+
+.btn span:nth-child(1) {
+  top: 20%;
+}
+
+.btn span:nth-child(2) {
+  top: 80%;
+}
+
+.btn.is-active span {
+  background: black;
+}
+
+/* logo animation */
+.btn.is-active span:nth-child(1){
+ top: 50%;
+  transform: rotate(-45deg);
+}
+
+.btn.is-active span:nth-child(2){
+ top: 50%;
+ transform: rotate(45deg);
+}
+
+.menu {
+  background: white;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 100px;
+  z-index: 1;
+  transition: .3s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.menu.is-active {
+   opacity: 1;
+   visibility: visible;
+}
+
+ .menu_List {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+  .menu_item:not(:last-child) {
+   margin-bottom: 30px;
+}
+
+.menu_link {
+  position: relative;
+  display: inline-flex;
+  font-weight: bold;
+  font-size: 68px;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+ .menu_link:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 5px;
+  display: inline-flex;
+  background: grey;
+  transition: .3s;
+  text-align: center;
+}
+
+.menu_link:hover:after {
+  width: 100%;
+}
+
+/* FRONT PAGE */
+.page-banner {
+z-index: -1;
+max-width: 100%;
+overflow: hidden;
+}
+
+.hero-area {
+background-size: cover;
+display: flex;
+height: 100%;
+justify-content: center;
+align-items: center;
+}
+
+/* SLIDING ANIMATION */
+
+
+@media screen and (max-width: 650px) {
+  .scroll-container,
+  .scroll-container:nth-of-type(even) {
+    flex-direction: column;
+    align-content: inherit;
+  }
+
+  .scroll-element {
+    height: 100%;
+
+  }
+
+  .scroll-element{
+    width: 100%;
+  }
+}
+
+.scrolled.fade-in-bottom {
+  animation: fade-in-bottom 1s ease-in-out both;
+}
+
+
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(200px);
+    transform: translateY(200px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.all-cats{
+display: flex;
+flex-direction: column;
+padding-top: 100px;
+padding-left: 70px;
+
+}
+.cat-one {
+display: flex;
+justify-content: flex-start;
+padding-bottom: 200px;
+}
+
+.cat-one img {
+display: flex;
+border-radius: 20px;
+
+}
+.slide-description {
+display: flex;
+justify-content: center;
+text-align: center;
+padding: 2vw;
+align-items: center;
+width: 45%;
+}
+
+
+
+footer {
+
+background-color: border-left: ;
+color: #000;
+height: 20px;
+width: 100%;
+position: absolute;
+text-align: center;
+margin-bottom: 0;
+}
+
+
+/* @media only screen and (max-width: 768px) {
+  body {
+    background-color: white;
+  }
+
+  .first-container {
+    background-color: pink;
+  }
+} */
